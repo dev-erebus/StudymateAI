@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyMate AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand">StudyMate AI Assistant</h1>
+    
+    <form id="askForm">
+      <input type="text" id="query" placeholder="Ask me anything..." required>
+      <button type="submit">Ask</button>
+    </form>
+
+    <div id="response" style="margin-top: 20px;"></div>
+    
+    <a href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+  </div><div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="darkToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
+
+
+  

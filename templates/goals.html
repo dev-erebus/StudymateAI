@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Goals</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="darkToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="container">
+    <div class="brand">Your Goals</div>
+    <form method="POST">
+      <input type="text" name="goal" placeholder="Enter a new goal..." required>
+      <button type="submit">Add Goal</button>
+    </form>
+    <ul>
+      {% for goal in goals %}
+        <li>
+          <span>{{ goal }}</span>
+          <a href="/delete_goal/{{ loop.index0 }}" class="delete">×</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

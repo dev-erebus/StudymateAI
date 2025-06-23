@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyMate | Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="darkToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="container">
+    <div class="brand">StudyMate</div>
+    <p style="text-align:center; font-size:1.1rem;">
+      Your all-in-one productivity and motivation platform built for students and creators.  
+    </p>
+    <p style="text-align:center;">
+      Plan. Focus. Grow. ✨
+    </p>
+    <div style="text-align:center; margin-top: 30px;">
+      <a href="/dashboard"><button>Launch Dashboard</button></a>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
